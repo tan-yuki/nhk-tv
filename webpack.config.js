@@ -4,8 +4,6 @@
 var path = require('path');
 var webpack = require('webpack');
 
-// var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
-
 /**
  * Webpack configuration
  *
@@ -14,8 +12,6 @@ var webpack = require('webpack');
 module.exports = {
 
   debug: true,
-
-  devtool: 'source-map',
 
   entry: {
     'main': './src/main.ts'
@@ -27,8 +23,7 @@ module.exports = {
 
   output: {
     path: './dist',
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].map',
+    filename: '[name].bundle.js'
   },
 
   module: {
@@ -48,24 +43,9 @@ module.exports = {
           /\.(spec|e2e|async)\.ts$/
         ]
       }
-      // {test: /\.json$/, loader: 'json-loader'},
-      // {test: /\.css$/, loader: 'raw-loader'},
-      // {test: /\.html$/, loader: 'raw-loader', exclude: ['index.html']}
     ]
 
   }
-
-  // plugins: [
-  //   new ForkCheckerPlugin(),
-  // ],
-
-  // tslint: {
-  //   emitErrors: false,
-  //   failOnHint: false,
-  //   resourcePath: 'src'
-  // }
-
-
 };
 
 function root(args) {

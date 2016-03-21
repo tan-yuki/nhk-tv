@@ -1,12 +1,16 @@
-import {Component} from "angular2/core";
-import {HelloWorld} from "../helloworld/helloworld.components";
+import {Component}           from "angular2/core";
+import {HeaderComponent}     from "./header.components";
+import {NavigationComponent} from "./navigation.components";
+import {ContentComponent}    from "./content.components";
 
 @Component({
   selector: `nhk-app`,
   template: `
-    <hello-world></hello-world>
+    <nhk-header></nhk-header>
+    <nhk-navigation></nhk-navigation>
+    <nhk-content></nhk-content>
   `,
-  directives: [HelloWorld]
+  directives: [ContentComponent, HeaderComponent, NavigationComponent]
 })
-export class App {
+export class AppComponent {
 }
